@@ -20,7 +20,7 @@ no_throw definitions in Cygwin's stdlib.h and import malloc from malloc.h instea
 4. run your program!
 
 # Example
-
+    ```C
     /* other.h */
     void memory_thieving_function(void);
 
@@ -44,7 +44,8 @@ no_throw definitions in Cygwin's stdlib.h and import malloc from malloc.h instea
       int* even_better = malloc(sizeof(int) * 9000);
       leak_check_run_and_print();
     }
-
+    ```
+    
     /* console output */
     Whoops!
     WARNING: leaked '50' bytes at address '0x600010378' in file 'main.c' on line '40' after 0.01s
