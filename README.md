@@ -53,7 +53,7 @@ int main() {
     
     /* console output */
     Whoops!
-    WARNING: leaked '50' bytes at address '0x600010378' in file 'main.c' on line '40' after 0.01s
+    WARNING: leaked '50' bytes at address '0x600010378' in file 'other.c' on line '7' after 0.01s
     WARNING: leaked '36000' bytes at address '0x600048488' in file 'main.c' on line '46' after 0.01s
     MEMORY REPORT: '2' alloc(s) made.  '2' not freed (total of '36050' bytes leaked).
     Process finished with exit code 0
