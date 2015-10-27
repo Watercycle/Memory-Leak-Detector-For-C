@@ -25,7 +25,7 @@ no_throw definitions in Cygwin's stdlib.h and import malloc from malloc.h instea
 void memory_thieving_function(void);
 
 /* other.c */
-#include "leaky_function.h"
+#include "other.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include "memory_leak_test.h"
