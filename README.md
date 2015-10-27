@@ -22,7 +22,12 @@ no_throw definitions in Cygwin's stdlib.h and import malloc from malloc.h instea
 # Example
 ```C
 /* other.h */
+#ifndef OTHER_H
+#define OTHER_H
+
 void memory_thieving_function(void);
+
+#endif /* OTHER_H */
 
 /* other.c */
 #include "other.h"
