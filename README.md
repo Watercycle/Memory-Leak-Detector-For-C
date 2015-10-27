@@ -20,31 +20,31 @@ no_throw definitions in Cygwin's stdlib.h and import malloc from malloc.h instea
 4. run your program!
 
 # Example
-    ```C
-    /* other.h */
-    void memory_thieving_function(void);
+```C
+/* other.h */
+void memory_thieving_function(void);
 
-    /* other.c */
-    #include "leaky_function.h"
-    #include <stdlib.h>
-    #include <stdio.h>
-    #include "memory_leak_test.h"
-    
-    void memory_thieving_function(void) {
-      char* forgotten_buffer = malloc(sizeof(char) * 50);
-      printf("Whoops!\n");
-    }
+/* other.c */
+#include "leaky_function.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include "memory_leak_test.h"
 
-    /* main.c */
-    #include "other.h"
-    #include "memory_leak_test.h"
-    
-    int main() {
-      memory_thieving_function();
-      int* even_better = malloc(sizeof(int) * 9000);
-      leak_check_run_and_print();
-    }
-    ```
+void memory_thieving_function(void) {
+  char* forgotten_buffer = malloc(sizeof(char) * 50);
+  printf("Whoops!\n");
+}
+
+/* main.c */
+#include "other.h"
+#include "memory_leak_test.h"
+
+int main() {
+  memory_thieving_function();
+  int* even_better = malloc(sizeof(int) * 9000);
+  leak_check_run_and_print();
+}
+```
     
     /* console output */
     Whoops!
